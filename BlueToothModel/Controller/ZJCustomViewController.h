@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ZJCustomViewController.h
 //  BlueToothModel
 //
 //  Created by zitang on 2018/5/11.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UITableViewController
-
+@interface ZJCustomViewController : UIViewController
 
 @end
-

@@ -13,6 +13,9 @@
 		888E233A20A58A0500E66FBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 888E233920A58A0500E66FBB /* Assets.xcassets */; };
 		888E233D20A58A0500E66FBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 888E233B20A58A0500E66FBB /* LaunchScreen.storyboard */; };
 		888E234020A58A0500E66FBB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 888E233F20A58A0500E66FBB /* main.m */; };
+		888E234B20A58E4900E66FBB /* ZJCustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 888E234A20A58E4900E66FBB /* ZJCustomViewController.m */; };
+		888E234E20A58E6F00E66FBB /* ZJRxBlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888E234D20A58E6F00E66FBB /* ZJRxBlueViewController.swift */; };
+		888E235220A58F3900E66FBB /* ZJBlueToothManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 888E235120A58F3900E66FBB /* ZJBlueToothManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		888E233C20A58A0500E66FBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		888E233E20A58A0500E66FBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		888E233F20A58A0500E66FBB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		888E234920A58E4900E66FBB /* ZJCustomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJCustomViewController.h; sourceTree = "<group>"; };
+		888E234A20A58E4900E66FBB /* ZJCustomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJCustomViewController.m; sourceTree = "<group>"; };
+		888E234C20A58E6F00E66FBB /* BlueToothModel-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BlueToothModel-Bridging-Header.h"; sourceTree = "<group>"; };
+		888E234D20A58E6F00E66FBB /* ZJRxBlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJRxBlueViewController.swift; sourceTree = "<group>"; };
+		888E235020A58F3900E66FBB /* ZJBlueToothManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJBlueToothManager.h; sourceTree = "<group>"; };
+		888E235120A58F3900E66FBB /* ZJBlueToothManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJBlueToothManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,10 @@
 		888E232F20A58A0400E66FBB /* BlueToothModel */ = {
 			isa = PBXGroup;
 			children = (
+				888E234F20A58F0900E66FBB /* ModelManager */,
+				888E234820A58E2900E66FBB /* Controller */,
+				888E234720A58E2100E66FBB /* View */,
+				888E234620A58E1800E66FBB /* Model */,
 				888E233020A58A0400E66FBB /* AppDelegate.h */,
 				888E233120A58A0400E66FBB /* AppDelegate.m */,
 				888E233320A58A0400E66FBB /* ViewController.h */,
@@ -67,8 +80,42 @@
 				888E233B20A58A0500E66FBB /* LaunchScreen.storyboard */,
 				888E233E20A58A0500E66FBB /* Info.plist */,
 				888E233F20A58A0500E66FBB /* main.m */,
+				888E234C20A58E6F00E66FBB /* BlueToothModel-Bridging-Header.h */,
 			);
 			path = BlueToothModel;
+			sourceTree = "<group>";
+		};
+		888E234620A58E1800E66FBB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		888E234720A58E2100E66FBB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		888E234820A58E2900E66FBB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				888E234920A58E4900E66FBB /* ZJCustomViewController.h */,
+				888E234A20A58E4900E66FBB /* ZJCustomViewController.m */,
+				888E234D20A58E6F00E66FBB /* ZJRxBlueViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		888E234F20A58F0900E66FBB /* ModelManager */ = {
+			isa = PBXGroup;
+			children = (
+				888E235020A58F3900E66FBB /* ZJBlueToothManager.h */,
+				888E235120A58F3900E66FBB /* ZJBlueToothManager.m */,
+			);
+			path = ModelManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,11 +144,13 @@
 		888E232520A58A0400E66FBB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = ZJ;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = zitang;
 				TargetAttributes = {
 					888E232C20A58A0400E66FBB = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -141,8 +190,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				888E234E20A58E6F00E66FBB /* ZJRxBlueViewController.swift in Sources */,
 				888E233520A58A0400E66FBB /* ViewController.m in Sources */,
+				888E234B20A58E4900E66FBB /* ZJCustomViewController.m in Sources */,
 				888E234020A58A0500E66FBB /* main.m in Sources */,
+				888E235220A58F3900E66FBB /* ZJBlueToothManager.m in Sources */,
 				888E233220A58A0400E66FBB /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +335,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CLFR894M64;
 				INFOPLIST_FILE = BlueToothModel/Info.plist;
@@ -292,6 +345,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zitang.BlueToothModel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BlueToothModel/BlueToothModel-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -300,6 +356,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CLFR894M64;
 				INFOPLIST_FILE = BlueToothModel/Info.plist;
@@ -309,6 +366,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zitang.BlueToothModel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BlueToothModel/BlueToothModel-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

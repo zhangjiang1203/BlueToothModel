@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  ZJBlueToothManager.h
 //  BlueToothModel
 //
 //  Created by zitang on 2018/5/11.
 //  Copyright © 2018年 zitang. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@interface ViewController : UITableViewController
-
+@interface ZJBlueToothManager : NSObject
 
 @end
-
